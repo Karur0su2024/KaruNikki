@@ -7,7 +7,7 @@
                 <img src="{{ $entry->icon }}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{ $entry->date }}</h5>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <a href="{{ route('daily-entry', $entry->id) }}" class="btn btn-primary">Show</a>
                 </div>
             </div>
         @endforeach

@@ -10,6 +10,9 @@ Route::view('/', 'home')->name('home');
 Route::get('/dailyentryform', DailyEntryForm::class)
     ->name('daily-entries');
 
+Route::get('/dailyentry/{entry}', [DashboardController::class, 'entry'])
+    ->middleware(['auth', 'verified'])
+    ->name('daily-entry');
 
 Volt::route('/dailyentryform', 'daily-entry-form')
     ->name('daily-entry-form');

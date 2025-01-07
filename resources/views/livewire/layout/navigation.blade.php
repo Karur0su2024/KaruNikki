@@ -29,6 +29,7 @@ new class extends Component {
                             {{ auth()->user()->name }}
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <li><a href="{{ route('dashboard') }}" class="dropdown-item">{{ __('Dashboard') }}</a></li>
                             <li><button wire:click='logout' class="dropdown-item">{{ __('Log Out') }}</button></li>
                         </ul>
                     </li>

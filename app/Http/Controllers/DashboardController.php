@@ -14,4 +14,11 @@ class DashboardController extends Controller
 
         return view('dashboard', compact('entries'));
     }
+
+    public function entry($entry)
+    {
+        $entry = auth()->user()->dailyEntries()->findOrFail($entry);
+
+        return view('daily-entry', compact('entry'));
+    }
 }
